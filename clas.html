@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Superliga</title>
+
+<style>
+body{
+    font-family: Arial;
+    background: black;
+    color: white;
+    text-align: center;
+}
+
+table{
+    margin: auto;
+    border-collapse: collapse;
+    width: 70%;
+}
+
+th, td{
+    padding: 10px;
+    border-bottom: 1px solid gray;
+}
+
+th{
+    background: lime;
+    color: black;
+}
+
+.champions{
+    background: green;
+}
+
+.descenso{
+    background: red;
+}
+</style>
+
+</head>
+<body>
+
+<h1>🏆 SUPERLIGA</h1>
+
+<table id="tabla">
+<tr>
+<th>#</th>
+<th>Equipo</th>
+<th>Puntos</th>
+</tr>
+</table>
+
+<script>
+
+// lista de equipos
+let equipos = [
+"Manchester City","Arsenal","Liverpool","Manchester United","Chelsea",
+"Real Madrid","Barcelona","Atlético Madrid","Sevilla","Real Sociedad",
+"Juventus","Inter","Milan","Napoli","Roma",
+"Bayern","Dortmund","Leipzig","Leverkusen","Frankfurt"
+];
+
+// crear datos
+let tabla = [];
+
+for(let i=0;i<equipos.length;i++){
+    let puntos = Math.floor(Math.random()*80);
+    tabla.push({nombre:equipos[i], pts:puntos});
+}
+
+// ordenar
+tabla.sort(function(a,b){
+    return b.pts - a.pts;
+});
+
+// mostrar
+let html = "";
+
+for(let i=0;i<tabla.length;i++){
+
+    let clase = "";
+    if(i<4) clase="champions";
+    if(i>16) clase="descenso";
+
+    html += "<tr class='"+clase+"'>";
+    html += "<td>"+(i+1)+"</td>";
+    html += "<td>"+tabla[i].nombre+"</td>";
+    html += "<td>"+tabla[i].pts+"</td>";
+    html += "</tr>";
+}
+
+document.getElementById("tabla").innerHTML += html;
+
+</script>
+
+</body>
+</html>
