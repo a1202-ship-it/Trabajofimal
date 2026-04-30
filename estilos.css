@@ -1,0 +1,93 @@
+body {
+    font-family: Arial;
+    background-color: white;
+    margin: 0;
+}
+
+h1 {
+    background-color: navy;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin: 0;
+}
+
+h2 {
+    text-align: center;
+    color: navy;
+}
+
+p {
+    text-align: center;
+}
+
+table {
+    width: 95%;
+    margin: auto;
+    background-color: white;
+    border-collapse: collapse;
+}
+
+th {
+    background-color: navy;
+    color: white;
+    padding: 8px;
+}
+
+td {
+    text-align: center;
+    padding: 6px;
+    border-bottom: 1px solid lightgray;
+}
+
+tr:nth-child(even) {
+    background-color: whitesmoke;
+}
+
+tr:hover {
+    background-color: lightblue;
+}
+
+/*a {
+    display: block;
+    text-align: center;
+    margin: 10px;
+    color: navy;
+}*/
+
+
+
+
+.champions {
+    background-color: green;
+    color: white;
+    font-weight: bold;
+}
+
+
+.europa {
+    background-color: blue;
+    color: white;
+    font-weight: bold;
+}
+
+
+.descenso {
+    background-color: red;
+    color: white;
+    font-weight: bold;
+}
+
+nav {
+    text-align: center;
+}
+
+nav a {
+display: inline-block;
+margin-top: 10px;
+background-color: #0077cc;
+color: white ;
+padding: 8px 12px;
+text-decoration: none;
+
+}
